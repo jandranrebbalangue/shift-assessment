@@ -7,6 +7,7 @@ const routes = [
     path: "/",
     name: "Home",
     exact: true,
+    Component: People,
   },
   {
     path: "/not-found",
