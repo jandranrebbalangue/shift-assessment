@@ -32,7 +32,7 @@ const Content = () => {
                   <Route
                     key={route.path}
                     path={route.path}
-                    // name={route.name}
+                    id={route.name}
                     element={<route.Component />}
                   />
                 )
