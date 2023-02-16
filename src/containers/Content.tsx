@@ -30,9 +30,9 @@ const Content = () => {
               return (
                 route.Component && (
                   <Route
-                    key={route.path as string}
-                    path={route.path as string}
-                    name={route.name as string}
+                    key={route.path}
+                    path={route.path}
+                    // name={route.name}
                     element={<route.Component />}
                   />
                 )
