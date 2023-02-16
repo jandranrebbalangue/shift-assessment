@@ -51,6 +51,10 @@ const navigation = [
     exact: false,
     icon: "question",
   },
+  {
+    name: "Create new Workspace",
+    exact: false,
+  },
 ];
 
 export default navigation;
