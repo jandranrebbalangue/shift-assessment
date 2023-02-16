@@ -33,7 +33,6 @@ const navigation = [
   },
   {
     name: "People",
-    to: "/people",
     exact: false,
     icon: "people",
   },
