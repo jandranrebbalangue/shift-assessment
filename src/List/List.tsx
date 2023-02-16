@@ -186,7 +186,7 @@ const List: React.FC = () => {
               <Container count="7" status="Active" />
             </div>
             <div className="">
-              <Container count="20" status="Active" margin="15px" />
+              <Container count="20" status="Pending" margin="15px" />
             </div>
           </div>
         </div>
