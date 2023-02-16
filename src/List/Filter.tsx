@@ -34,9 +34,9 @@ const Filter: React.FC<SearchMembersProps> = ({ onChange }): JSX.Element => {
                 <div className="d-flex justify-content-end">
                   <Button
                     type="button"
-                    variant="primary"
+                    variant="light"
                     size="sm"
-                    className="text-light me-2"
+                    className="text-black me-2"
                   >
                     <FontAwesomeIcon
                       icon={faPlus as IconProp}
