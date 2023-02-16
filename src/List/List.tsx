@@ -4,13 +4,9 @@ import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import Spinner from "../components/Spinner";
 import Table from "./Table";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Filters from "./Filter";
 import Container from "../components/Container";
 import { useDebounce } from "usehooks-ts";
-import { Col, Row } from "react-bootstrap";
 import { URL } from "../../constants";
 
 export type UserProps = {
@@ -182,30 +178,16 @@ const List: React.FC = () => {
     <>
       <div className="list w-100">
         <div className="d-flex align-items-center justify-content-between mb-4">
-          <div>
-            <Container count="7" status="Active" />
-          </div>
-          <div className="p-0">
-            <Container count="20" status="Active" />
-          </div>
-          <div>
+          <div className="d-flex justify-content-between">
             <div>
-              <Button
-                type="button"
-                variant="primary"
-                size="sm"
-                className="text-light me-2"
-              >
-                <FontAwesomeIcon icon={faPlus as IconProp} className="me-2" />
-                invite people
-              </Button>
+              <Container count="7" status="Active" />
+            </div>
+            <div className="">
+              <Container count="20" status="Active" margin="15px" />
             </div>
           </div>
         </div>
         <Filters onChange={onChange} />
-        <Row>
-          <Col></Col>
-        </Row>
         {body}
       </div>
     </>
