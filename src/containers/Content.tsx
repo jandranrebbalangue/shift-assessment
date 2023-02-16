@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
 import "../scss/components/content.scss";
@@ -30,9 +30,9 @@ const Content = () => {
               return (
                 route.Component && (
                   <Route
-                    key={route.path}
-                    path={route.path}
-                    name={route.name}
+                    key={route.path as string}
+                    path={route.path as string}
+                    name={route.name as string}
                     element={<route.Component />}
                   />
                 )
