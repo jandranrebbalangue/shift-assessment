@@ -37,17 +37,18 @@ const List: React.FC = () => {
   } = useQuery(["users"], getUsers);
 
   const searchByName = (firstName: string) => {
-    const filter = data?.filter((item) => item.firstName === firstName);
-    return filter;
+    const search = data?.filter((item) =>
+      item.firstName.toLowerCase().includes(firstName.toLowerCase())
+    );
+    return search;
   };
-  const { data: searchUser, isError: errorSearchUser } = useQuery(
+  const { data: searchUsers, isError: errorSearchUser } = useQuery(
     ["users", debouncedFilter],
     () => searchByName(debouncedFilter),
     {
       enabled: Boolean(debouncedFilter),
     }
   );
-
   let body;
 
   const deleteMutation = useMutation({
@@ -81,7 +82,7 @@ const List: React.FC = () => {
   };
   if (isFetching || isLoading) {
     body = <Spinner />;
-  } else if (searchUser?.length === 0) {
+  } else if (searchUsers?.length === 0) {
     body = (
       <div className="text-center">
         <h5>No users found. Try a different search or invite a Team Member</h5>
@@ -98,7 +99,7 @@ const List: React.FC = () => {
       <h5>No data yet</h5>
     </div>;
   } else if (firstName) {
-    const searchUsers = data?.filter((item) => item.firstName === firstName);
+    /* const searchUsers = data?.filter((item) => item.firstName === firstName); */
     body = (
       <React.Fragment>
         <Modal show={visible} onHide={handleClose} centered>

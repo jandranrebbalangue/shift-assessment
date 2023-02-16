@@ -10,7 +10,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import profile from "../assets/icons/svg/profile.svg";
 
 interface FuncProps {
-  list: any;
+  list: UserProps[] | undefined;
   removeItem: (email: string) => void;
 }
 
@@ -27,7 +27,7 @@ const Table: React.FC<FuncProps> = ({ list, removeItem }) => {
             </tr>
           </thead>
           <tbody>
-            {list.map((item: UserProps, index: number) => {
+            {list?.map((item: UserProps, index: number) => {
               return (
                 <tr key={index}>
                   <td>
