@@ -1,0 +1,1 @@
+export const URL = "https://voicetest20202.s3.amazonaws.com/users.json"

@@ -1,0 +1,35 @@
+$primary: #1e88e5;
+// $primary: #3c82ed;
+$secondary: #7e57c2;
+$warning: #ff9800;
+$info: #797fae;
+$success: #4caf50;
+$danger: #e74c3c;
+$light: #f7f8fb;
+$dark: #202342;
+
+$header-height: 80px;
+
+// Then add them to your custom theme-colors map, together with any additional colors you might need
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+  // add any additional color below
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 3.75,
+);

@@ -1,0 +1,71 @@
+@import "./variables";
+
+.app {
+  display: grid;
+  grid-template-columns: 330px auto;
+  grid-template-rows: $header-height auto 50px;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #3c82ed;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 330px auto;
+  grid-template-rows: $header-height auto 50px;
+  grid-template-areas:
+    "sidebar-head"
+    "sidebar-body"
+    "sidebar-toggle";
+  height: 100vh;
+}
+
+.sidebar-head {
+  grid-area: sidebar-head;
+  background-color: #3c82ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $header-height;
+
+  img {
+    height: 60px;
+    width: 270px;
+  }
+}
+
+.sidebar-body {
+  grid-area: sidebar-body;
+  border-right: 1px solid #efeff3;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.sidebar-toggle {
+  grid-area: sidebar-toggle;
+  border-right: 1px solid #efeff3;
+}
+
+.content {
+  grid-area: content;
+  background-color: #f7f8fb;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.card {
+  box-shadow: 0 7px 14px 0 rgb(65 69 88 / 10%), 0 3px 6px 0 rgb(0 0 0 / 7%);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
