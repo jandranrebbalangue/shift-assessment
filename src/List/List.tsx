@@ -23,8 +23,8 @@ const List: React.FC = () => {
   const [toRemoveFirstName, setToRemoveFirstName] = useState<string | null>(
     null
   );
-  const [firstName, setFirstName] = useState<string>("");
-  const debouncedFilter = useDebounce(firstName, 500);
+  const [searchText, setSearchText] = useState<string>("");
+  const debouncedFilter = useDebounce(searchText, 500);
   const getUsers = async (): Promise<UserProps[]> => {
     const d = await fetch(URL);
     return d.json();
@@ -36,9 +36,12 @@ const List: React.FC = () => {
     isError: errorUsers,
   } = useQuery(["users"], getUsers);
 
-  const searchByName = (firstName: string) => {
-    const search = data?.filter((item) =>
-      item.firstName.toLowerCase().includes(firstName.toLowerCase())
+  const searchByName = (searchText: string) => {
+    const search = data?.filter(
+      (item) =>
+        item.firstName.toLowerCase().includes(searchText.toLowerCase()) ||
+        item.lastName.toLowerCase().includes(searchText.toLowerCase()) ||
+        item.email.toLowerCase().includes(searchText.toLowerCase())
     );
     return search;
   };
@@ -61,7 +64,7 @@ const List: React.FC = () => {
   });
 
   const onChange = (e: string) => {
-    setFirstName(e);
+    setSearchText(e);
   };
 
   const removeMember = () => {
@@ -98,8 +101,7 @@ const List: React.FC = () => {
     <div>
       <h5>No data yet</h5>
     </div>;
-  } else if (firstName) {
-    /* const searchUsers = data?.filter((item) => item.firstName === firstName); */
+  } else if (searchText) {
     body = (
       <React.Fragment>
         <Modal show={visible} onHide={handleClose} centered>
