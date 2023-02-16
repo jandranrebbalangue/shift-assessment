@@ -7,13 +7,11 @@ const navigation = [
   },
   {
     name: "My account",
-    to: "/account",
     exact: false,
     icon: "account",
   },
   {
     name: "Login & Security",
-    to: "/login",
     exact: false,
     icon: "security",
   },
@@ -22,7 +20,6 @@ const navigation = [
   },
   {
     name: "Workspace Name",
-    to: "/workspace",
     exact: false,
     icon: "workspace",
   },
@@ -31,7 +28,6 @@ const navigation = [
   },
   {
     name: "Team Details",
-    to: "/team-details",
     exact: false,
     icon: "folder",
   },
@@ -43,19 +39,16 @@ const navigation = [
   },
   {
     name: "Social accounts",
-    to: "/social",
     exact: false,
     icon: "social",
   },
   {
     name: "Billing & plans",
-    to: "/billing",
     exact: false,
     icon: "billing",
   },
   {
     name: "FAQ",
-    to: "/faq",
     exact: false,
     icon: "question",
   },
