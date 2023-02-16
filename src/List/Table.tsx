@@ -20,7 +20,7 @@ const Table: React.FC<FuncProps> = ({ list, removeItem }) => {
       <Card.Body>
         <RBTable striped hover responsive>
           <thead>
-            <tr className="text-uppercase">
+            <tr>
               <th>Name</th>
               <th>Email</th>
               <th className="d-none d-sm-table-cell">Status</th>
