@@ -1,7 +1,6 @@
 import RBTable from "react-bootstrap/Table";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-/* import { useNavigate } from "react-router-dom"; */
 import "../scss/components/table.scss";
 import { UserProps } from "./List";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
