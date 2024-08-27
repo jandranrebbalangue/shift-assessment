@@ -38,7 +38,7 @@ const Content = () => {
                 )
               );
             })}
-            <Route path="/*" element={<Redirect to="/not-found" />} />
+            <Route path="/*" element={<Redirect to="/react/not-found" />} />
           </Routes>
         </Suspense>
       </Container>

@@ -1,4 +1,4 @@
-import NotFoundImg from "./assets/icons/svg/not-found.svg";
+import NotFoundImg from "/assets/icons/svg/not-found.svg";
 
 const NotFound = () => (
   <div className="dashboard">

@@ -4,19 +4,19 @@ const People = React.lazy(() => import("../src/List"));
 const NotFound = React.lazy(() => import("../src/NotFound"));
 const routes = [
   {
-    path: "/",
+    path: "/react",
     name: "Home",
     exact: true,
     Component: People,
   },
   {
-    path: "/not-found",
+    path: "/react/not-found",
     name: "Not Found",
     exact: true,
     Component: NotFound,
   },
   {
-    path: "/people",
+    path: "/react/people",
     name: "People",
     exact: true,
     Component: People,

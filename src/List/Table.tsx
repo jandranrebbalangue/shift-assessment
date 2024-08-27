@@ -6,7 +6,7 @@ import { UserProps } from "./List";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import profile from "../assets/icons/svg/profile.svg";
+import profile from "/assets/icons/svg/profile.svg";
 
 interface FuncProps {
   list: UserProps[] | undefined;
